@@ -1,0 +1,15 @@
+C:\Users\Firefly\Desktop\shit\bin\Debug\net7.0\shit.exe
+C:\Users\Firefly\Desktop\shit\bin\Debug\net7.0\shit.deps.json
+C:\Users\Firefly\Desktop\shit\bin\Debug\net7.0\shit.runtimeconfig.json
+C:\Users\Firefly\Desktop\shit\bin\Debug\net7.0\shit.dll
+C:\Users\Firefly\Desktop\shit\bin\Debug\net7.0\shit.pdb
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.csproj.AssemblyReference.cache
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.AssemblyInfoInputs.cache
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.AssemblyInfo.cs
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.csproj.CoreCompileInputs.cache
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.dll
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\refint\shit.dll
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.pdb
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\shit.genruntimeconfig.cache
+C:\Users\Firefly\Desktop\shit\obj\Debug\net7.0\ref\shit.dll
