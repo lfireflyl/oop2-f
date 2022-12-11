@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Firefly\\.nuget\\packages\\": {}
+    "/Users/daniilboyarov/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Firefly\\Desktop\\shit\\shit.csproj",
+      "projectUniqueName": "/Users/daniilboyarov/c# proj/oop2-f/shit.csproj",
       "projectName": "shit",
-      "projectPath": "C:\\Users\\Firefly\\Desktop\\shit\\shit.csproj",
-      "packagesPath": "C:\\Users\\Firefly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Firefly\\Desktop\\shit\\obj\\",
+      "projectPath": "/Users/daniilboyarov/c# proj/oop2-f/shit.csproj",
+      "packagesPath": "/Users/daniilboyarov/.nuget/packages/",
+      "outputPath": "/Users/daniilboyarov/c# proj/oop2-f/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Firefly\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/daniilboyarov/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

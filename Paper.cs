@@ -24,5 +24,12 @@ namespace newLab2
         {
             return string.Format(_Publication, " ", _Author.ToString(), " ", _TimeOfPublication.ToString());
         }
+
+        public virtual object DeepCopy()
+        {
+            Paper PaperCopy = new Paper(this._Publication, this._Author, this._TimeOfPublication);
+            return PaperCopy;
+        }
+
     }
 }

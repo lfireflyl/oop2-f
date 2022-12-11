@@ -17,14 +17,19 @@ namespace newLab2
         System.Collections.ArrayList Publications = new ArrayList();
 
         public System.Collections.ArrayList ListOfPublication { get { return Publications; } set { Publications = value; } }
-        public ResearchTeam(string InvestigationTheme, string Organisation, int RegistrationNumber, TimeFrame InvestigationDuration)
+        public ResearchTeam(string InvestigationTheme, string Organisation, int RegistrationNumber, TimeFrame InvestigationDuration,ArrayList ProjectPartipants, ArrayList Publications)
+            :base(Organisation,RegistrationNumber)
         {
+            Theme = InvestigationTheme;
             ResearchDuration = InvestigationDuration;
-             Theme= InvestigationTheme;
-            _RegistrationNumber = RegistrationNumber;
-            _Organisation = Organisation;
         }
-        public ResearchTeam() : this("Ottoy", "octane", 13, TimeFrame.Year) { }
+        public ResearchTeam()
+            :base()
+        { 
+                this.Theme = "";
+                this.ResearchDuration = TimeFrame.Long;
+
+        }
 
         public Paper LastPaper {
             get {
@@ -43,8 +48,9 @@ namespace newLab2
                 return (Paper)Publications[MaxIndex];
             }
         }
-        public void AddPapers(params Paper[] AdditionalPapers) {
-            Publications.AddRange(AdditionalPapers);
+        public void AddPapers(params Paper[] AdditionalPapers) 
+        {
+        Publications.AddRange(AdditionalPapers);
         }
         public override string ToString()
         {
@@ -77,9 +83,21 @@ namespace newLab2
         }
         public override object DeepCopy()
         {
-            ResearchTeam CopyTeam = new ResearchTeam(this.Theme, this.Organisation, this.RegistrationNumber, this.ResearchDuration);
-            CopyTeam.ListOfParticipants = ListOfParticipants;
-            CopyTeam.ListOfPublication = ListOfPublication;
+            Paper [] temp_paper;
+            Person[] temp_person;
+            List<Paper> temp_paper2 = new List<Paper>();
+            List<Person> temp_person2 = new List<Person>();
+            temp_person = (Person[])this.ProjectParticipants.ToArray(typeof(Person));
+            temp_paper = (Paper[])this.Publications.ToArray(typeof(Paper));
+            foreach(Person a in temp_person){
+                temp_person2.Add((Person)a.DeepCopy());
+            }
+            foreach(Paper a in temp_paper){
+                temp_paper2.Add((Paper)a.DeepCopy());
+            }
+            ArrayList temp1 = new ArrayList(temp_person2);
+            ArrayList temp2 = new ArrayList(temp_paper2);
+            ResearchTeam CopyTeam = new ResearchTeam(this.Theme, this.Organisation, this.RegistrationNumber, this.ResearchDuration, temp1, temp2);
             return CopyTeam;
 
         }

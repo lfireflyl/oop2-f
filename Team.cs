@@ -8,18 +8,18 @@ namespace newLab2
 {
     class Team:InameAndCopy
     {
-        protected string _Organisation;
-        public string Organisation { get { return _Organisation; } set { _Organisation = value; } }
-        protected int _RegistrationNumber;
+        protected string organisation;
+        public string Organisation { get { return organisation; } set { organisation = value; } }
+        protected int registrationNumber;
         public int RegistrationNumber {
-            get { return _RegistrationNumber; }
+            get { return registrationNumber; }
             set {
                 if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("Registration number must be more than 0 ");
                 }
                 else {
-                    _RegistrationNumber = value;
+                    registrationNumber = value;
                 }
             }
         }
@@ -28,7 +28,7 @@ namespace newLab2
         {
             get
             {
-                return string.Format("Team of organisation {0} with registration number {1}",_Organisation,_RegistrationNumber);
+                return string.Format("Team of organisation {0} with registration number {1}",organisation,registrationNumber);
             }
 
             set
@@ -38,13 +38,13 @@ namespace newLab2
         }
 
         public Team(string Organisation, int RegistrationNumber) {
-            _Organisation = Organisation;
-            _RegistrationNumber = RegistrationNumber;
+            organisation = Organisation;
+            registrationNumber = RegistrationNumber;
         }
         public Team():this("Unknown organisation",1) {
         }
         public virtual object DeepCopy(){
-            return new Team(this._Organisation,this._RegistrationNumber);
+            return new Team(this.organisation,this.registrationNumber);
             }
         public virtual bool Equals(object obj) {
             if (obj == null) {
@@ -74,14 +74,14 @@ namespace newLab2
 
         public virtual new int GetHashCode() {
             int HashCode = 0;
-            foreach (char ch in _Organisation.ToCharArray()) {
+            foreach (char ch in organisation.ToCharArray()) {
                 HashCode += (int) Convert.ToUInt32(ch);
             }           
-                HashCode += _RegistrationNumber;
+                HashCode += registrationNumber;
             return HashCode;
         }
         public virtual new string ToString() {
-            return string.Format("Team of organisation {0} with registration number {1}",_Organisation,_RegistrationNumber);
+            return string.Format("Team of organisation {0} with registration number {1}",organisation,registrationNumber);
             }
         }
 }

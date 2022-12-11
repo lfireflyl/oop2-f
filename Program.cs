@@ -28,9 +28,13 @@ namespace newLab2
             Console.WriteLine(MyTeam3.getTeamType.ToString());
             ResearchTeam MyTeam4 = (ResearchTeam)MyTeam3.DeepCopy();
             MyTeam3.Organisation = "mirea";
-            MyTeam3.RegistrationNumber = 8;
+            MyTeam3.RegistrationNumber = 10;
             Console.WriteLine(MyTeam3.ToString());
             Console.WriteLine(MyTeam4.ToString());
+            // MyTeam3.RegistrationNumber = 15;
+            
+            // Console.WriteLine(MyTeam3.ToString());
+
             
             foreach (Person pers in MyTeam3.MembersWithoutPublications()) {
                 Console.WriteLine(pers);
@@ -39,7 +43,6 @@ namespace newLab2
             {
                 Console.WriteLine(pap);
             }
-
             Console.ReadKey();
         }
     }
